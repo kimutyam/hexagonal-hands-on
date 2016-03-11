@@ -1,0 +1,4 @@
+GET         /users/:id        @org.kimutyam.hexagonalExample.port.primary.webService.adapter.http.controller.UserController.get(id: Long)
+POST        /users            @org.kimutyam.hexagonalExample.port.primary.webService.adapter.http.controller.UserController.create
+
+GET         /ads              @org.kimutyam.hexagonalExample.port.primary.webService.adapter.http.controller.AdController.getList
