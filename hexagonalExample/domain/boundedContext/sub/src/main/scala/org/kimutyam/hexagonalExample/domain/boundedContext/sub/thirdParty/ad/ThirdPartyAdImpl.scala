@@ -1,4 +1,4 @@
-package org.kimutyam.hexagonalExample.domain.boundedContext.thirdParty.ad
+package org.kimutyam.hexagonalExample.domain.boundedContext.sub.thirdParty.ad
 
 case class ThirdPartyAdImpl(
                              id: Long,

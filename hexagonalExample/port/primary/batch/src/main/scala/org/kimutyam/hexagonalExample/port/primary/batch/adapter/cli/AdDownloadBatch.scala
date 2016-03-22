@@ -2,7 +2,7 @@ package org.kimutyam.hexagonalExample.port.primary.batch.adapter.cli
 
 import org.kimutyam.hexagonalExample.application.boundedContextMapper.AdConverter
 import org.kimutyam.hexagonalExample.domain.boundedContext.core.ad.AdRepository
-import org.kimutyam.hexagonalExample.domain.boundedContext.thirdParty.ad.ThirdPartyAdRepository
+import org.kimutyam.hexagonalExample.domain.boundedContext.sub.thirdParty.ad.ThirdPartyAdRepository
 
 class AdDownloadBatch(
                        adRepository: AdRepository,
