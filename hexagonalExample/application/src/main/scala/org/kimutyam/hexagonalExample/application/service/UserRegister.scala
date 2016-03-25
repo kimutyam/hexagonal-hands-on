@@ -7,7 +7,7 @@ class UserRegister(userRepository: UserRepository) {
 
   def regist(dto: UserWriteDTO): Unit = {
     val id = java.util.UUID.randomUUID.toString
-    userRepository.store(dto.convertUser(id: String))
+    userRepository.store(dto.convertUser(id))
     ()
   }
 }
