@@ -9,7 +9,7 @@ import org.kimutyam.hexagonalExample.port.primary.webService.adapter.http.util.D
 
 class UserController @Inject()(
                                 userRepository: UserRepository,
-                                userUploader: UserRegister
+                                userRegister: UserRegister
                               ) extends Controller {
   def get(id: Long): EssentialAction = Action {
     val user: Option[User] = userRepository.resolveBy(id)
@@ -23,7 +23,7 @@ class UserController @Inject()(
   def create: EssentialAction = Action(json) { implicit request =>
     val dtos = request.body.extract[Seq[UserWriteDTO]]
     dtos.foreach { dto =>
-      userUploader.regist(dto)
+      userRegister.regist(dto)
     }
     Ok(toPagingJson(dtos))
   }
