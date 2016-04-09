@@ -1,7 +1,7 @@
 package org.kimutyam.hexagonalExample.application.boundedContextMapper
 
 import org.kimutyam.hexagonalExample.domain.boundedContext.core.ad.Ad
-import org.kimutyam.hexagonalExample.domain.boundedContext.thirdParty.ad.{ThirdPartyAdStatus, ThirdPartyAd}
+import org.kimutyam.hexagonalExample.domain.boundedContext.sub.thirdParty.ad.{ThirdPartyAdStatus, ThirdPartyAd}
 
 object AdConverter {
   def convertToAd(thirdPartyAd: ThirdPartyAd): Ad = {

@@ -1,4 +1,4 @@
-package org.kimutyam.hexagonalExample.domain.boundedContext.thirdParty.ad
+package org.kimutyam.hexagonalExample.domain.boundedContext.sub.thirdParty.ad
 
 trait ThirdPartyAd {
   val id: Long

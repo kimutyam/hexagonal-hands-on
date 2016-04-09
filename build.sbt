@@ -34,7 +34,7 @@ lazy val domain = Project(
 ).settings(commonSettings)
   .aggregate(
     domainCore,
-    domainThirdParty
+    domainSub
   )
 
 lazy val domainCore = Project(
@@ -42,9 +42,9 @@ lazy val domainCore = Project(
   base = file("hexagonalExample/domain/boundedContext/core")
 ).settings(commonSettings)
 
-lazy val domainThirdParty = Project(
-  id = "domain-thirdParty",
-  base = file("hexagonalExample/domain/boundedContext/thirdParty")
+lazy val domainSub = Project(
+  id = "domain-sub",
+  base = file("hexagonalExample/domain/boundedContext/sub")
 ).settings(commonSettings)
 
 lazy val application = Project(
@@ -53,7 +53,7 @@ lazy val application = Project(
 ).settings(commonSettings)
   .dependsOn(
     domainCore % "test->test;compile->compile",
-    domainThirdParty % "test->test;compile->compile"
+    domainSub % "test->test;compile->compile"
   )
 
 lazy val port = Project(
